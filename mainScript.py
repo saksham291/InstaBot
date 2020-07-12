@@ -19,8 +19,7 @@ class InstagramBot():
     def signIn(self):
         self.browser.get('https://www.instagram.com/accounts/login/')
         wait = WebDriverWait(self.browser, 10)
-        second_page_flag = wait.until(EC.presence_of_element_located(
-    (By.CLASS_NAME, "KPnG0")))
+        second_page_flag = wait.until(EC.presence_of_element_located((By.CLASS_NAME, "KPnG0")))
         emailInput = self.browser.find_element_by_name('username')
         passwordInput = self.browser.find_element_by_name('password')
         emailInput.click()
@@ -56,13 +55,6 @@ class InstagramBot():
             y+=1
         self.browser.quit()
 
-
-# bot = InstagramBot('ihappenedinindia', 'Instagram291', ['photoshoot','photographylovers'], 'Hey! Nice Pic... check out my page too...')
-# bot.signIn()
-# bot.comment()
-# bot = InstagramBot('ihappenedinindia', 'Instagram291', ['streetphotography','wanderlust',], 'Hey! Nice Pic... check out my page too...')
-# bot.signIn()
-# bot.comment()
-bot = InstagramBot(instaUser, instaPass, ['shotoniphone','l4l','f4f'], 'Hey! Nice Pic... check out my page too...')
+bot = InstagramBot(instaUser, instaPass, ['shotoniphone','l4l','f4f'], 'YOUR_COMMENT')
 bot.signIn()
 bot.comment()
