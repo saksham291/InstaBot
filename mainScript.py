@@ -55,6 +55,6 @@ class InstagramBot():
             y+=1
         self.browser.quit()
 
-bot = InstagramBot(instaUser, instaPass, ['shotoniphone','l4l','f4f'], 'YOUR_COMMENT')
+bot = InstagramBot(instaUser, instaPass, ['photography','mobilephotography','photographersofindia'], 'Hey nice pic! mind checking my profile too..')
 bot.signIn()
 bot.comment()
